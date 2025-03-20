@@ -1,14 +1,14 @@
 class Player {
     constructor(canvas) {
         this.ctx = canvas.getContext("2d");
-        this.image = document.getElementById("source");
+        this.image = document.getElementById("mChar");
         this.x = 300;
         this.y =  100;
         this.width = 50;
         this.height = 50;
         this.speedX = 0;
         this.speedY = 0;
-        this.maxSpeed = 4;
+        this.maxSpeed = 6;
         this.rightKey = false;
         this.leftKey = false;
         this.upKey = false;
@@ -21,8 +21,8 @@ class Player {
 
     changeSpeed(){
         if(this.speedX == 5 && this.speedY == 5){
-            this.speedX = 2.5;
-            this.speedY = 2.5;
+            this.speedX = 3;
+            this.speedY = 3;
         }
         if(this.rightKey && this.speedX < this.maxSpeed){
             this.speedX += 0.5;
